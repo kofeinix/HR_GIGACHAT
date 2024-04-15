@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container_big">
+<div id="chat_window" class="chat_window">
+</div>
+
+<div class="container">
+    <div class="formbox">
+    <form action = "{{ request.url_for('home_page') }}" id = "forma" method="post">
+        <div class="input_items">
+
+            <div class="item">
+                <label for="desc"><span>Промпт</span></label>
+                <textarea class ='form-input_desc' name = 'prompt' id="desc"></textarea>
+            </div>
+
+
+        </div>
+        <div class="control_buttons">
+            <button class="s_button" type="submit" id="submit_button"> Отправить </button>
+            <div class="clear_buttons">
+            <reset id="reset" class="s_button" value="Reset">Очистить чат</reset>
+            <button id="clear_conversation" class="s_button" value="Reset">Сбросить историю беседы</button>
+            </div>
+        </div>
+    </form>
+
+
+    </div>
+    {% if error is not none %}
+    <div><p> {{ error }} </p></div>
+    {% endif %}
+</div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
+
+{% block scripts %}
+<script src = "{{ request.url_for('static', path='/js/form_redefinition.js') }}"></script>
+{% endblock %}

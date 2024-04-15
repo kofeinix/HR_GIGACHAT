@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ title }}</title>
+{% endblock %}
+
+
+{% block body%}
+<style>
+    div.about_prog {
+    background-color: #ffffff;
+    }
+    div.about_prog p {
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    color: #000000;
+    background-color: #ffffff;
+    }
+</style>
+
+
+<div class="about_prog">
+TODO<br>
+<br>
+<p> Реализовано в рамках SRT-1540</p>
+<p>Мы открыты для обратной связи:</p>
+    <a href="mailto:SRTe_support@sberbank.ru">SRTe_support@sberbank.ru</a>
+</div>
+
+{% endblock %}

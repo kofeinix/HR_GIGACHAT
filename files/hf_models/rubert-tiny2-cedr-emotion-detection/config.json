@@ -1,0 +1,44 @@
+{
+  "_name_or_path": "cointegrated/rubert-tiny2",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "emb_size": 312,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "id2label": {
+    "0": "no_emotion",
+    "1": "joy",
+    "2": "sadness",
+    "3": "surprise",
+    "4": "fear",
+    "5": "anger"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 600,
+  "label2id": {
+    "anger": 5,
+    "fear": 4,
+    "joy": 1,
+    "no_emotion": 0,
+    "sadness": 2,
+    "surprise": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 2048,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 3,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "problem_type": "multi_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.12.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 83828
+}

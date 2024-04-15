@@ -1,0 +1,13 @@
+input_variables: [text]
+partial_variables:
+    combine_size: '15-20 предложений'
+template: 'Суммаризируй части собеседования в один текст на {combine_size}.
+
+
+"{text}"
+
+
+Теперь суммаризируй части собеседования в один текст на {combine_size}.
+Краткое содержимое:'
+template_format: f-string
+_type: prompt

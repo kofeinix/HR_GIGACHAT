@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="GPT">
+<meta name="keywords" content="GPT">
+<meta name="author" content="YVK">
+
+<script>
+    var csrf_token = '{{ csrf_token }}';
+    console.log(csrf_token)
+</script>
+
+
+<link rel="icon" href="../../../../favicon.ico">
+<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">-->
+<script src = "{{ request.url_for('static', path='/js/jquerry.js') }}"></script>
+
+{% block head %}
+{% endblock %}
+
+<link type="text/css" href="/static/css/styles.css" rel="stylesheet" />
+</head>
+
+
+<body>
+<table class="table-page" border=0 cellpadding="0" cellspacing="0">
+<tr>
+    <td valign=top>
+        {% block mainmenu %}
+            <div class="header">
+                <ul id="mainmenu" class="mainmenu">
+                 {% for m in menu %}
+                            <li><a href=" {{ request.url_for(m.url_name) }}">{{m.title}}</a></li>
+                 {% endfor %}
+                </ul>
+                <div class="clear"></div>
+            </div>
+        {% endblock mainmenu %}
+
+    <table class="table-content" border=0 cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="content">
+   <div class="content-text">
+        {% block body %}
+        {% endblock %}
+        {% block scripts %}
+        {% endblock %}
+   </div>
+</td></tr></table>
+</td></tr>
+
+<!— Footer —>
+
+<tr><td valign=top>
+   <div id="footer">
+      <p class="footer-info-left">SRTe Team</p>
+       {% block footer %}
+        {% endblock %}
+   </div>
+</td></tr></table>
+
+<!— Конец footer'а и страницы —
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+input_variables: [text]
+partial_variables:
+    map_size: '5-10 предложений'
+template: 'Напиши краткое содержимое части собеседования объемом в {map_size}. 
+
+
+    
+"{text}"
+
+
+Теперь напиши краткое содержимое части собеседования объемом в {map_size}. '
+template_format: f-string
+_type: prompt
